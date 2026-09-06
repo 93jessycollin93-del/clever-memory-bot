@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/93jessycollin93-del/jacky/main/superstation/spec/pod.manifest.schema.json",
+  "kernel": "1.0.0",
+  "pod": {
+    "id": "sas.pod.clever-memory-bot",
+    "name": "Clever Memory Bot",
+    "role": "bot",
+    "repo": "93jessycollin93-del/clever-memory-bot",
+    "summary": "Documentation and recall surface. Early \u2014 the docs shell exists, the memory backend does not yet."
+  },
+  "provides": [
+    {
+      "id": "sas.memory.docs",
+      "version": "1.0.0",
+      "title": "Documentation browser \u2014 DocsSidebar, DocsContent, CodeBlock"
+    }
+  ],
+  "requires": [
+    {
+      "id": "sas.route.ask",
+      "range": "1.x",
+      "optional": true
+    },
+    {
+      "id": "sas.vault.search",
+      "range": "1.x",
+      "optional": true
+    }
+  ],
+  "surfaces": [
+    {
+      "kind": "static",
+      "base": "/",
+      "note": "Vite/React + shadcn"
+    }
+  ]
+}
